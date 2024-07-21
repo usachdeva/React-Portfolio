@@ -1,20 +1,19 @@
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Project from "./components/Project";
-import Apps from "./components/Apps";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
+import AboutMe from "./components/AboutMe";
+import Footer from "./components/Footer";
 
 function App() {
     return (
         <div>
             <Header />
             <Navbar />
-            <Apps />
-            <Apps />
-            <Apps />
-            <Apps />
-            <Project />
-            <Project />
-            <Project />
+            <AboutMe />
+            <Portfolio />
+            {/* <Contact /> */}
+            <Footer />
         </div>
     );
 }
