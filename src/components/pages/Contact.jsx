@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { validateEmail } from "../utils/helpers";
+import { validateEmail } from "../../utils/helpers";
 
 export default function ContactMe() {
     // Create state variables for the fields in the form
