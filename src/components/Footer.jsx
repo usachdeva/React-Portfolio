@@ -18,7 +18,7 @@ export default function Footer() {
     };
 
     return (
-        <footer style={styles.footer}>
+        <footer className="fixed-bottom" style={styles.footer}>
             <a
                 href="https://github.com/usachdeva"
                 target="_blank"

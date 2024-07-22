@@ -8,6 +8,7 @@ export default function ContactMe() {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
 
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
@@ -42,15 +43,14 @@ export default function ContactMe() {
 
     return (
         <div>
-            <h1 className="Contact">Contact Me</h1>
-            <form className="form" onSubmit={handleFormSubmit}>
+            <form className="form m-3" onSubmit={handleFormSubmit}>
                 <div class="mb-3">
                     <label for="name" class="form-label">
                         Name
                     </label>
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         onChange={handleInputChange}
                         id="nameInput"
                         placeholder="Ken Adams"
@@ -63,7 +63,7 @@ export default function ContactMe() {
                     </label>
                     <input
                         type="email"
-                        class="form-control"
+                        className="form-control"
                         onChange={handleInputChange}
                         id="emailInput"
                         placeholder="kenAdams@email.com"
@@ -75,12 +75,14 @@ export default function ContactMe() {
                         Message
                     </label>
                     <textarea
-                        class="form-control"
+                        className="form-control"
                         onChange={handleInputChange}
                         id="messageInput"
                         rows="3"
                     ></textarea>
                 </div>
+
+                <button type="submit">Submit</button>
             </form>
             {errorMessage && (
                 <div>

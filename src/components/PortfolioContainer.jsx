@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Header from "./Header";
 import NavTabs from "./Navbar";
 import About from "./pages/AboutMe";
 import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
 import Experience from "./pages/Experience";
 import Footer from "./Footer";
 
@@ -10,7 +12,7 @@ export default function PortfolioContainer() {
 
     // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
     const renderPage = () => {
-        if (currentPage === "Home" || currentPage === "About Me") {
+        if (currentPage === "Home" || currentPage === "AboutMe") {
             return <About />;
         }
         if (currentPage === "Contact") {
@@ -19,6 +21,9 @@ export default function PortfolioContainer() {
         if (currentPage === "Experience") {
             return <Experience />;
         }
+        if (currentPage === "Resume") {
+            return <Resume />;
+        }
         return <Contact />;
     };
 
@@ -26,11 +31,14 @@ export default function PortfolioContainer() {
 
     return (
         <div>
-            {/* We are passing the currentPage from state and the function to update it */}
-            <NavTabs
-                currentPage={currentPage}
-                handlePageChange={handlePageChange}
-            />
+            <div className="d-flex">
+                <Header />
+                {/* We are passing the currentPage from state and the function to update it */}
+                <NavTabs
+                    currentPage={currentPage}
+                    handlePageChange={handlePageChange}
+                />
+            </div>
             {/* Here we are calling the renderPage method which will return a component  */}
             <main className="mx-3">{renderPage()}</main>
             {/* For the footer */}

@@ -1,3 +1,5 @@
 import Card from "./Card";
 
-export default function About() {}
+export default function Experience() {
+    return <h1>Projects</h1>;
+}
