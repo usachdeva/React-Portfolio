@@ -6,42 +6,54 @@ import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 import Experience from "./pages/Experience";
 import Footer from "./Footer";
+import { BiBorderBottom } from "react-icons/bi";
 
 export default function PortfolioContainer() {
+    const styles = {
+        container: {
+            display: "flex",
+            flexDirection: "column",
+        },
+        headerNav: {
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "10px",
+            borderBottom: "2px solid black",
+        },
+    };
+
     const [currentPage, setCurrentPage] = useState("Home");
 
-    // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
     const renderPage = () => {
-        if (currentPage === "Home" || currentPage === "AboutMe") {
-            return <About />;
+        switch (currentPage) {
+            case "Home":
+            case "AboutMe":
+                return <About />;
+            case "Contact":
+                return <Contact />;
+            case "Experience":
+                return <Experience />;
+            case "Resume":
+                return <Resume />;
+            default:
+                return <Contact />;
         }
-        if (currentPage === "Contact") {
-            return <Contact />;
-        }
-        if (currentPage === "Experience") {
-            return <Experience />;
-        }
-        if (currentPage === "Resume") {
-            return <Resume />;
-        }
-        return <Contact />;
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
 
     return (
-        <div>
-            <div className="d-flex">
+        <div style={styles.container}>
+            <div style={styles.headerNav}>
                 <Header />
-                {/* We are passing the currentPage from state and the function to update it */}
                 <NavTabs
                     currentPage={currentPage}
                     handlePageChange={handlePageChange}
                 />
             </div>
-            {/* Here we are calling the renderPage method which will return a component  */}
             <main className="mx-3">{renderPage()}</main>
-            {/* For the footer */}
             <Footer />
         </div>
     );

@@ -1,9 +1,11 @@
 import Nav from "./Navbar";
 
 export default function Header() {
-    return (
-        <div className="d-flex justify-content-start">
-            <h1>Udit</h1>
-        </div>
-    );
+    const styles = {
+        heading: {
+            display: "flex",
+            justifyContent: "flex-start",
+        },
+    };
+    return <h1>Udit</h1>;
 }

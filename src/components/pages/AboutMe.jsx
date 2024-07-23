@@ -1,8 +1,18 @@
 export default function About() {
+    const styles = {
+        img: {
+            width: "200px",
+            height: "200px",
+        },
+    };
     return (
         <div>
             <h1 className="Aboutme">About Me</h1>
-            <img src="" alt="Profile Picture" />
+            <img
+                src=""
+                alt="Profile Picture"
+                className="rounded mx-auto d-block"
+            />
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Blanditiis minus consequatur non vitae architecto delectus aut,
