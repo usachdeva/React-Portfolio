@@ -3,6 +3,12 @@ import { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
 
 export default function ContactMe() {
+    const style = {
+        input: {
+            maxWidth: "50%",
+        },
+    };
+
     // Create state variables for the fields in the form
     // We are also setting their initial values to an empty string
     const [email, setEmail] = useState("");
@@ -24,28 +30,36 @@ export default function ContactMe() {
         } else {
             setMessage(inputValue);
         }
+
+        setErrorMessage("");
     };
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
 
-        if (!validateEmail(email) || !name || !message) {
-            setErrorMessage("Email, name or message is invalid");
+        if (!validateEmail(email)) {
+            setErrorMessage("Email is invalid");
+            return;
+        } else if (!name) {
+            setErrorMessage("name  is invalid");
+            return;
+        } else if (!message) {
+            setErrorMessage("message is invalid");
             return;
         }
-
         alert(`Hello ${name}`);
 
         setName("");
         setMessage("");
         setEmail("");
+        setErrorMessage("");
     };
 
     return (
-        <div>
+        <div className="m-3">
             <form className="form m-3" onSubmit={handleFormSubmit}>
-                <div class="mb-3">
-                    <label for="name" class="form-label">
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">
                         Name
                     </label>
                     <input
@@ -54,31 +68,34 @@ export default function ContactMe() {
                         onChange={handleInputChange}
                         id="nameInput"
                         placeholder="Ken Adams"
+                        maxLength="50"
+                        size="60"
                     />
                 </div>
 
-                <div class="mb-3">
-                    <label for="email" class="form-label">
+                <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
                         Email
                     </label>
                     <input
                         type="email"
-                        className="form-control"
+                        className="form-control input"
+                        style={style.input}
                         onChange={handleInputChange}
                         id="emailInput"
                         placeholder="kenAdams@email.com"
                     />
                 </div>
 
-                <div class="mb-3">
-                    <label for="Message" class="form-label">
+                <div className="mb-3">
+                    <label htmlFor="message" className="form-label">
                         Message
                     </label>
                     <textarea
                         className="form-control"
                         onChange={handleInputChange}
                         id="messageInput"
-                        rows="3"
+                        rows="5"
                     ></textarea>
                 </div>
 

@@ -8,6 +8,7 @@ export default function Footer() {
             padding: "20px",
             backgroundColor: "#333",
             color: "#fff",
+            positon: "fixed",
         },
         icon: {
             margin: "0 10px",

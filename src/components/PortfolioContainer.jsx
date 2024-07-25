@@ -6,7 +6,6 @@ import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 import Experience from "./pages/Experience";
 import Footer from "./Footer";
-import { BiBorderBottom } from "react-icons/bi";
 
 export default function PortfolioContainer() {
     const styles = {
@@ -30,7 +29,7 @@ export default function PortfolioContainer() {
         switch (currentPage) {
             case "Home":
             case "AboutMe":
-                return <About />;
+                return <Experience />;
             case "Contact":
                 return <Contact />;
             case "Experience":
@@ -53,7 +52,7 @@ export default function PortfolioContainer() {
                     handlePageChange={handlePageChange}
                 />
             </div>
-            <main className="mx-3">{renderPage()}</main>
+            <main className="">{renderPage()}</main>
             <Footer />
         </div>
     );
