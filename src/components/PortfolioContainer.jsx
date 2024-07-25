@@ -28,6 +28,7 @@ export default function PortfolioContainer() {
     const renderPage = () => {
         switch (currentPage) {
             case "Home":
+                return <About />;
             case "AboutMe":
                 return <About />;
             case "Contact":
@@ -37,7 +38,7 @@ export default function PortfolioContainer() {
             case "Resume":
                 return <Resume />;
             default:
-                return <Contact />;
+                return <About />;
         }
     };
 

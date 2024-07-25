@@ -5,8 +5,10 @@ import { validateEmail } from "../../utils/helpers";
 export default function ContactMe() {
     const style = {
         input: {
-            maxWidth: "50%",
+            maxWidth: "30%",
+            borderColor: "black",
         },
+        textArea: { maxWidth: "30%", borderColor: "black" },
     };
 
     // Create state variables for the fields in the form
@@ -56,8 +58,8 @@ export default function ContactMe() {
     };
 
     return (
-        <div className="m-3">
-            <form className="form m-3" onSubmit={handleFormSubmit}>
+        <div className="form-container m-3">
+            <form className="form" onSubmit={handleFormSubmit}>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">
                         Name
@@ -65,11 +67,10 @@ export default function ContactMe() {
                     <input
                         type="text"
                         className="form-control"
+                        style={style.input}
                         onChange={handleInputChange}
                         id="nameInput"
                         placeholder="Ken Adams"
-                        maxLength="50"
-                        size="60"
                     />
                 </div>
 
@@ -93,6 +94,7 @@ export default function ContactMe() {
                     </label>
                     <textarea
                         className="form-control"
+                        style={style.textArea}
                         onChange={handleInputChange}
                         id="messageInput"
                         rows="5"
