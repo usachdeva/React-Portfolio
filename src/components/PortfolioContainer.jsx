@@ -29,7 +29,7 @@ export default function PortfolioContainer() {
         switch (currentPage) {
             case "Home":
             case "AboutMe":
-                return <Experience />;
+                return <About />;
             case "Contact":
                 return <Contact />;
             case "Experience":

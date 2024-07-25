@@ -38,7 +38,7 @@ export default function Cards() {
             <div className="col">
                 <div className="card">
                     <a
-                        href="https://github.com/usachdeva/Weather-App"
+                        href="https://usachdeva.github.io/Weather-App/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="card-link"
@@ -51,7 +51,7 @@ export default function Cards() {
                         <div className="icon-container">
                             <a
                                 className="icon"
-                                href="https://github.com/usachdeva"
+                                href="https://github.com/usachdeva/Weather-App"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
