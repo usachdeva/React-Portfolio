@@ -25,7 +25,7 @@ export default function Cards() {
                         <div className="icon-container">
                             <a
                                 className="icon"
-                                href="https://github.com/usachdeva"
+                                href="https://github.com/usachdeva/Task-Manager"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

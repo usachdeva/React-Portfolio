@@ -39,6 +39,7 @@ export default function ContactMe() {
     const handleFormSubmit = (e) => {
         e.preventDefault();
 
+        console.log(email);
         if (!validateEmail(email)) {
             setErrorMessage("Email is invalid");
             return;
@@ -71,6 +72,7 @@ export default function ContactMe() {
                         onChange={handleInputChange}
                         id="nameInput"
                         placeholder="Ken Adams"
+                        name="name"
                     />
                 </div>
 
@@ -85,6 +87,7 @@ export default function ContactMe() {
                         onChange={handleInputChange}
                         id="emailInput"
                         placeholder="kenAdams@email.com"
+                        name="email"
                     />
                 </div>
 
@@ -98,6 +101,7 @@ export default function ContactMe() {
                         onChange={handleInputChange}
                         id="messageInput"
                         rows="5"
+                        name="message"
                     ></textarea>
                 </div>
 
