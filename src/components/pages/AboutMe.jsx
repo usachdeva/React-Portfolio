@@ -10,6 +10,7 @@ export default function About() {
         },
         text: {
             textAlign: "justify",
+            margin: "2% 10%",
         },
     };
     return (
@@ -20,22 +21,18 @@ export default function About() {
                 alt="Profile Picture"
                 className="mx-auto d-block"
             />
-            <p className="text" style={styles.text}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Blanditiis minus consequatur non vitae architecto delectus aut,
-                ipsam corrupti tenetur natus dolorum adipisci aperiam odio
-                molestias officiis nulla ipsum magni veritatis? Modi fugit
-                dolorum totam voluptatem suscipit fuga, voluptatum, deserunt
-                perspiciatis dicta distinctio consequatur hic facere! Omnis
-                cumque voluptates, accusantium blanditiis sequi tempora fuga
-                enim optio commodi modi aperiam, minus labore. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Eos dolore perferendis
-                aliquid provident hic quos sunt odio tempora rem, architecto
-                nisi magni laborum beatae nam ullam incidunt fugiat? Corporis,
-                reprehenderit! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Reprehenderit quaerat inventore laboriosam
-                quae a harum neque doloremque molestias eaque culpa quo, quam
-                repudiandae porro odit cumque qui, ad pariatur quas!
+            <p className="text-break" style={styles.text}>
+                Hi, I graduated from UoFT BootCamp for coding. Though I have a
+                little bit of experience in working with languages while working
+                on projects back in 2018. I joined this course to learn more
+                about new technologies, so that I can enter this area
+                professionally.
+                <br />
+                In the experience, you will find the projects I have completed
+                during the course. There I have attached to github repos and the
+                links for the working of the working of the projects. At the end
+                of the portfolio, there is section to contact me where you can
+                leave your email and message, I will cotact you later.
             </p>
         </div>
     );

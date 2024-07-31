@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import emailjs from "emailjs-com";
 import { validateEmail } from "../../utils/helpers";
 
 export default function ContactMe() {
@@ -51,6 +51,32 @@ export default function ContactMe() {
             return;
         }
         alert(`Hello ${name}`);
+
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+        };
+
+        emailjs
+            .send(
+                "service_o8ylqqo",
+                "template_e5jq8a6",
+                templateParams,
+                "9S7-j-FXY44M0M0vi"
+            )
+            .then(
+                (response) => {
+                    console.log("SUCCESS!", response.status, response.text);
+                    alert("Email sent successfully!");
+                },
+                (error) => {
+                    console.log("FAILED...", error);
+                    setErrorMessage(
+                        "Failed to send the email. Please try again later."
+                    );
+                }
+            );
 
         setName("");
         setMessage("");
