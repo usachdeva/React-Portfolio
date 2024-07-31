@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    position: relative; /* Add this to position the icon container absolutely within the card */
     overflow: hidden;
 }
 

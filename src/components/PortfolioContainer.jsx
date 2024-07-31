@@ -20,6 +20,7 @@ export default function PortfolioContainer() {
             alignItems: "center",
             padding: "10px",
             borderBottom: "2px solid black",
+            backgroundColor: "grey",
         },
     };
 
@@ -48,10 +49,14 @@ export default function PortfolioContainer() {
         <div style={styles.container}>
             <div style={styles.headerNav}>
                 <Header />
-                <NavTabs
-                    currentPage={currentPage}
-                    handlePageChange={handlePageChange}
-                />
+                <nav className="navbar navbar-expand-lg ">
+                    <div className="container-fluid">
+                        <NavTabs
+                            currentPage={currentPage}
+                            handlePageChange={handlePageChange}
+                        />
+                    </div>
+                </nav>
             </div>
             <main className="">{renderPage()}</main>
             <Footer />

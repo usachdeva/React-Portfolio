@@ -1,6 +1,6 @@
 import image1 from "../../assets/project-1.png";
 import image2 from "../../assets/project-2.png";
-import image3 from "../../assets/project-1.png";
+import image3 from "../../assets/project-3.png";
 import image4 from "../../assets/project-1.png";
 import "../../assets/css/icon.css";
 import React from "react";
@@ -63,40 +63,54 @@ export default function Cards() {
             </div>
             <div className="col">
                 <div className="card">
-                    <img
-                        src={image3}
-                        className="card-img-top"
-                        alt="project-3"
-                    />
-                    <div className="icon-container">
-                        <a
-                            className="icon"
-                            href="https://github.com/usachdeva"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaGithub />
-                        </a>
-                    </div>
+                    <a
+                        href="https://usachdeva.github.io/Bloggers/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card-link"
+                    >
+                        <img
+                            src={image3}
+                            className="card-img-top"
+                            alt="project-3"
+                        />
+                        <div className="icon-container">
+                            <a
+                                className="icon"
+                                href="https://github.com/usachdeva/Bloggers"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaGithub />
+                            </a>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div className="col">
                 <div className="card">
-                    <img
-                        src={image4}
-                        className="card-img-top"
-                        alt="project-4"
-                    />
-                    <div className="icon-container">
-                        <a
-                            className="icon"
-                            href="https://github.com/usachdeva"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaGithub />
-                        </a>
-                    </div>
+                    <a
+                        href="https://note-taker-4c57.onrender.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card-link"
+                    >
+                        <img
+                            src={image3}
+                            className="card-img-top"
+                            alt="project-3"
+                        />
+                        <div className="icon-container">
+                            <a
+                                className="icon"
+                                href="https://github.com/usachdeva/Note-Taker"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaGithub />
+                            </a>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
