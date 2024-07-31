@@ -42,5 +42,5 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 
 ```
 git repo: https://github.com/usachdeva/React-Portfolio
-deployed:
+deployed: https://stirring-kleicha-275df6.netlify.app/
 ```
