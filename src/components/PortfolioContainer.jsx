@@ -6,12 +6,12 @@ import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 import Experience from "./pages/Experience";
 import Footer from "./Footer";
-
 export default function PortfolioContainer() {
     const styles = {
         container: {
             display: "flex",
             flexDirection: "column",
+            height: "100vh",
         },
         headerNav: {
             display: "flex",
@@ -19,8 +19,12 @@ export default function PortfolioContainer() {
             justifyContent: "space-between",
             alignItems: "center",
             padding: "10px",
-            borderBottom: "2px solid black",
-            backgroundColor: "grey",
+            borderBottom: "1px solid black",
+            backgroundColor: "#ff8633",
+        },
+        main: {
+            flex: 1,
+            backgroundColor: "#33e0ff",
         },
     };
 
@@ -58,7 +62,9 @@ export default function PortfolioContainer() {
                     </div>
                 </nav>
             </div>
-            <main className="">{renderPage()}</main>
+            <main className="" style={styles.main}>
+                {renderPage()}
+            </main>
             <Footer />
         </div>
     );

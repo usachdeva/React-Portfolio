@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "./Project";
 
 export default function Experience() {
     return (

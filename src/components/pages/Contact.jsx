@@ -59,7 +59,7 @@ export default function ContactMe() {
     };
 
     return (
-        <div className="form-container m-3">
+        <div className="form-container m-5">
             <form className="form" onSubmit={handleFormSubmit}>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">
